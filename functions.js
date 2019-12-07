@@ -63,7 +63,6 @@ _m.constructor.prototype.evaluate = function(str)
 };
 /*
     EXTRACT VARIABLES EXPRESSION
-    TO REPLACE JSEP
 */
 _m.constructor.prototype.expressionVar = function(z)
 {

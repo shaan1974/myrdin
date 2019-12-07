@@ -153,15 +153,7 @@ _m.constructor.prototype.getHelpers = function(pc, name, parms)
         var real_parms, myKeys, myValues;
 
         real_parms = parms.replace(this.regExpReplace["_REAL_PARMS_"][0], this.regExpReplace["_REAL_PARMS_"][1]);
-
-        /*var myObject = jsep("" + real_parms + "");
-        myKeys = JSON.stringify(myObject).match(_m.regExp._MATCH_NAMES_GLOBAL_).map(function(o)
-        {
-            return o.match(_m.regExp._MATCH_NAMES_)[1];
-        });*/
-
         myKeys = this.expressionVar(real_parms);
-
 
         for (cnt = 0, len = myKeys.length; cnt < len; cnt++)
         {

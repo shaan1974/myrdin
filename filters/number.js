@@ -6,25 +6,11 @@
 */
 _m.constructor.prototype.filters["increment"] = function(v)
 {
-    /*
-    if (v.constructor.toString().indexOf("String()") != -1)
-    {
-        v = Number("" + v + "");
-    }
-
-    return v++;
-    */
     return (v * 1) + 1;
 };
 
 _m.constructor.prototype.filters["decrement"] = function(v)
 {
-    /*if (v.constructor.toString().indexOf("String()") != -1)
-    {
-        v = Number("" + v + "");
-    }
-
-    return v--;*/
     return (v * 1) - 1;
 };
 /*

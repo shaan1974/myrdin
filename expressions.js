@@ -84,18 +84,6 @@ _m.constructor.prototype.parseExpression = function(pc, exp, ndx, ccc)
     //  REPLACE END PARENTHESIS WITH DEFINE ALIAS
     exp = exp.replace(this.regExp._END_PARENTHESIS_, " _ENDP_ ");
 
-    //	SET THE EXPRESSION TO GET ALL REAL VARIABLES THAT WE SHOULD GET THE VALUES
-
-    /*
-    var myObject = jsep(exp);
-
-    var myKeys = JSON.stringify(myObject).match(_m.regExp._MATCH_NAMES_GLOBAL_).map(function(o)
-    {
-        return o.match(_m.regExp._MATCH_NAMES_)[1];
-    });
-    */
-    // var myKeys = this.expressionVar(exp);
-
     //  IF VALUE EXIST RELATED TO NAME FOUND INTO JSON STRINGIFY STRING TRY TO GET THE VALUE
     //
 
