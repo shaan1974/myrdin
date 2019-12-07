@@ -1,30 +1,6 @@
 ﻿/*jshint sub:true*/
 /*jslint evil: true */
 /*jslint esversion:6 */
-/*
-    MAIN
-
-    // GENERATE FROM STRING TEMPLATE
-        console.clear();
-        console.time("Total");
-        _m(jsonData,template,"#content")
-        console.timeEnd("Total");
-
-    //  GENERATE FROM SCRIPT TAG OR HTML CONTENT
-        
-        // SCRIPT
-        console.clear();
-        console.time("Total");
-        _m(jsonData,"#tmpl","#content")
-        console.timeEnd("Total");
-
-        // HTML
-        console.clear();
-        console.time("Total");
-        _m(jsonData,"#content","#content")
-        console.timeEnd("Total");        
-
-*/
 function _m(jsonData, template, destContent)
 {
     /*
@@ -33,10 +9,10 @@ function _m(jsonData, template, destContent)
     _m.about = function()
     {
         var about = {
-            Version: "0.58",
+            Version: "0.71",
             Author: "Liuzzi Stéphane Aka Shaan1974",
             Started: "17-10-2019",
-            Updated: "12-12-2019"
+            Updated: "07-12-2019"
         };
         return about;
     };
@@ -81,7 +57,6 @@ function _m(jsonData, template, destContent)
             "template": template,
             "dest": destContent,
             "jsonData": jsonData
-
         };
 
         _m.generateTemplate();

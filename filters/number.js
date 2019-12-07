@@ -2,7 +2,8 @@
 /*jslint evil: true */
 /*jslint esversion:6 */
 /*
-	NUMBER
+    NUMBER
+    https://stackabuse.com/javascript-convert-string-to-number/
 */
 _m.constructor.prototype.filters["increment"] = function(v)
 {

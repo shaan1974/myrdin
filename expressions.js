@@ -87,16 +87,15 @@ _m.constructor.prototype.parseExpression = function(pc, exp, ndx, ccc)
     //  IF VALUE EXIST RELATED TO NAME FOUND INTO JSON STRINGIFY STRING TRY TO GET THE VALUE
     //
 
-    // if (myKeys.length != 0)
     if (this.expressionVar(exp).length != 0)
     {
         var myKeys = this.expressionVar(exp);
-        //	SORT ARRAY TO GET MAXIMUM LENGTH STRING TO MIN
+        //	SORT ARRAY TO GET MAXIMUM LENGTH STRING TO MIN TO AVOID COLLISION INTO REMPLACEMENT
         //
         myKeys.sort(_m.constructor.prototype.parseExpression_sort);
 
         //	LOOP TO CHECK IF VAR EXIST OR NOT
-
+        //
         for (cnt = 0, len = myKeys.length; cnt < len; cnt++)
         {
             current_key = myKeys[cnt];
@@ -150,23 +149,6 @@ _m.constructor.prototype.parseExpression = function(pc, exp, ndx, ccc)
             }
         }
     }
-
-    //  PATH FOR MATH EXPRESSION
-    //  https://regex101.com/r/eE6mX3/1
-    /*
-    fO = (exp).match(this.regExp._MATH_EXPRESSION_);
-
-    if (fO !== null)
-    {
-        // fO = (exp).match(this.regExp._MATH_EXPRESSION_);
-
-        for (cnt = 0, len = fO.length; cnt < len; cnt++)
-        {
-            r = fO[0].replace(this.regExp._SINGLE_QUOTE_, "").replace(this.regExp._DOUBLE_QUOTE_, "");
-            exp = exp.replace(fO[cnt], r);
-        }
-    }
-    */
 
     //  CREATE NEW FUNCTION TO GET RESULT IN RETURN 
 

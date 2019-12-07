@@ -9,18 +9,6 @@ _m.constructor.prototype.function = [];
 /*
 	GENERATE UUID
 */
-_m.constructor.prototype.uuidv4 = function()
-{
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
-        _m.regExp["_UUID_"],
-        function(c)
-        {
-            var r = Math.random() * 16 | 0,
-                v = c == 'x' ? r : (r & 0x3 | 0x8);
-            return v.toString(16).toUpperCase();
-        }
-    );
-};
 _m.constructor.prototype.uuid = function()
 {
     return ("" + Math.random().toString(36).substring(2) + Date.now().toString(36) + "").toUpperCase();
@@ -42,7 +30,7 @@ _m.constructor.prototype.stripHtml = function(str)
 _m.constructor.prototype.evaluate = function(str)
 {
     //  VARS
-    var cuid = _m.uuidv4();
+    var cuid = _m.uuid();
 
     //	CREATE SCRIPT TAG AND POPULATE WITH INSTRUCTIONS
     var s = document.createElement('script');

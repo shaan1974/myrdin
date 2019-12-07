@@ -102,7 +102,7 @@ template = function()
 				<p>
 					<b>FILTERS:</b>
 					<p>Uniq,Join [ {{=data_array | uniq|join}} ]</p>
-					<p>Total inc [ {{=total | increment}} ]</p>
+					<p>Total={{=total}} inc [ {{=total | increment}} ]</p>
 					<p>Uniq,Join [ {{=data_array | uniq|join '-' }} ]</p>
 					<p>split,Join [ {{=serial_number | split "-"|join "," }} ]</p>
 					<p>split,Join [ {{=serial_number | slice "4" "-4"}} ]</p>
@@ -369,9 +369,9 @@ template = function()
 						{{? if @last ?}}<p>_LAST_ELM_</p>{{? end if ?}}
 
 						{{? if . EQ 'Cc' ?}}
-							<p>[THIRD because equal to 'Cc']</p>
+							<p>[SECOND because equal to 'Cc']</p>
 						{{? else ?}}
-							<p>[NOT_THIRD]</P>
+							<p>[NOT SECOND]</P>
 						{{? end if ?}}
 
 						<div>

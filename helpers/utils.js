@@ -9,5 +9,5 @@
 */
 _m.constructor.prototype.helpers["uuid"] = function()
 {
-    return _m.uuidv4();
+    return _m.uuid();
 };
