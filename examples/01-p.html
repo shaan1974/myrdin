@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- POLYFILL FOR MSIE -->
+<script src="../polyfill.js"></script>
+<!-- /POLYFILL FOR MSIE -->
+
+<!-- DEPENDENCIES -->
+<script src="../dependencies/jsep/jsep-0.3.4/jsep.min.js"></script>
+<script src="../dependencies/momentjs/moment.min.js"></script>
+<script src="../dependencies/momentjs/locale/fr.js"></script>
+<script src="../dependencies/accounting/accounting.js"></script>
+<script src="../dependencies/text-clipper/2.js"></script>
+<!-- /DEPENDENCIES -->
+
+<!-- DATA -->
+<script src="../data/json.js"></script>
+<script src="../data/template.js"></script>
+<!-- /DATA -->
+
+<!-- ENGINE -->
+<script src="../dist/all.js"></script>
+<!-- /ENGINE -->
+
+<script>
+    function init() {
+
+        console.clear();
+        console.time("Total");
+        _m(jsonData, template, "#content")
+        console.timeEnd("Total");
+
+    }
+</script>
+
+<body onload="init()">
+
+    <h5>Template into a variable:</h5>
+
+    <div id="content">
+    </div>
+
+</body>
+
+</html>
