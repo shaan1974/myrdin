@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- POLYFILL FOR MSIE -->
+<script src="../polyfill.js"></script>
+<!-- /POLYFILL FOR MSIE -->
+
+<!-- DEPENDENCIES -->
+<script src="../dependencies/jsep/jsep-0.3.4/jsep.min.js"></script>
+<script src="../dependencies/momentjs/moment.min.js"></script>
+<script src="../dependencies/momentjs/locale/fr.js"></script>
+<script src="../dependencies/accounting/accounting.js"></script>
+<script src="../dependencies/text-clipper/2.js"></script>
+<!-- /DEPENDENCIES -->
+
+<!-- DATA -->
+<script src="../data/json.js"></script>
+<!-- /DATA -->
+
+<!-- ENGINE -->
+<script src="../_engine.js"></script>
+
+<script src="../filters/_.js"></script>
+<script src="../filters/string.js"></script>
+<script src="../filters/number.js"></script>
+<script src="../filters/array.js"></script>
+<script src="../filters/date.js"></script>
+
+<script src="../functions.js"></script>
+
+<script src="../build/_.js"></script>
+<script src="../build/fcts.js"></script>
+
+<script src="../expressions/_.js"></script>
+<script src="../expressions/string.js"></script>
+<script src="../expressions/number.js"></script>
+<script src="../expressions/date.js"></script>
+<script src="../expressions/list.js"></script>
+<script src="../expressions/array.js"></script>
+<script src="../expressions/object.js"></script>
+<script src="../expressions/zz.js"></script>
+
+
+<script src="../vars.js"></script>
+<script src="../options.js"></script>
+<script src="../expressions.js"></script>
+
+<script src="../helpers/_.js"></script>
+<script src="../helpers/utils.js"></script>
+<script src="../helpers/date.js"></script>
+<script src="../helpers/string.js"></script>
+<!-- /ENGINE -->
+
+<script>
+    function init() {
+
+        console.clear();
+        console.time("Total");
+        µµ(jsonData, "#content", "#content")
+        console.timeEnd("Total");
+
+    }
+</script>
+
+<body onload="init()">
+
+    <h5>Template into the same destination container:</h5>
+
+    <div id="content">
+        <p>
+            <b>TRAINING #1</b>
+            <ul>
+                {{# every trainings #}}
+
+                <li>{{=trainer}}</li>
+
+                {{# otherwise #}}
+
+                <li>Sorry no trainings now.</li>
+
+                {{# end every #}}
+            </ul>
+        </p>
+
+        <p>
+            <b>TRAINING #2</b>
+            <ul>
+                {{# every trainings2 #}}
+
+                <li>{{=trainer}}</li>
+
+                {{# otherwise #}}
+
+                <li>Sorry no trainings now.</li>
+
+                {{# end every #}}
+            </ul>
+        </p>
+    </div>
+
+</body>
+
+</html>
