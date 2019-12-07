@@ -4,55 +4,55 @@
 /*
 	STRING
 */
-µµ.constructor.prototype.filters["uppercase"] = function(str)
+_m.constructor.prototype.filters["uppercase"] = function(str)
 {
     return str.toUpperCase();
 };
 
-µµ.constructor.prototype.filters["lowercase"] = function(str)
+_m.constructor.prototype.filters["lowercase"] = function(str)
 {
     return str.toLowerCase();
 };
 
-µµ.constructor.prototype.filters["trim"] = function(str)
+_m.constructor.prototype.filters["trim"] = function(str)
 {
     return str.trim();
 };
 
-µµ.constructor.prototype.filters["capitalizeFirstLetter"] = function(str)
+_m.constructor.prototype.filters["capitalizeFirstLetter"] = function(str)
 {
     str = str.toLowerCase();
     return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
-µµ.constructor.prototype.filters["capitalizeEachWord"] = function(str)
+_m.constructor.prototype.filters["capitalizeEachWord"] = function(str)
 {
 
     return (str).split(" ").map(function(o)
     {
-        return µµ.filters.capitalizeFirstLetter(o);
+        return _m.filters.capitalizeFirstLetter(o);
     }).join(" ");
 };
 
-µµ.constructor.prototype.filters["trim"] = function(str)
+_m.constructor.prototype.filters["trim"] = function(str)
 {
 
     return str.replace(/^\s+|\s+$/g, "");
 };
 
-µµ.constructor.prototype.filters["ltrim"] = function(str)
+_m.constructor.prototype.filters["ltrim"] = function(str)
 {
 
     return str.replace(/^\s+/, "");
 };
 
-µµ.constructor.prototype.filters["rtrim"] = function(str)
+_m.constructor.prototype.filters["rtrim"] = function(str)
 {
 
     return str.replace(/\s+$/, "");
 };
 
-µµ.constructor.prototype.filters["split"] = function(str, parms)
+_m.constructor.prototype.filters["split"] = function(str, parms)
 {
 
     var p1 = (typeof parms !== "undefined") ? parms[0] : " ";
@@ -60,7 +60,7 @@
     return str.split("" + p1 + "");
 };
 
-µµ.constructor.prototype.filters["slice"] = function(str, parms)
+_m.constructor.prototype.filters["slice"] = function(str, parms)
 {
 
     var p1 = (typeof parms !== "undefined") ? parms[0] : 0;
@@ -69,19 +69,19 @@
     return str.slice(p1, p2);
 };
 
-µµ.constructor.prototype.filters["urlEncode"] = function(str)
+_m.constructor.prototype.filters["urlEncode"] = function(str)
 {
 
     return encodeURIComponent(str);
 };
 
-µµ.constructor.prototype.filters["urlDecode"] = function(str)
+_m.constructor.prototype.filters["urlDecode"] = function(str)
 {
 
     return decodeURIComponent(str);
 };
 
-µµ.constructor.prototype.filters["linearize"] = function(str)
+_m.constructor.prototype.filters["linearize"] = function(str)
 {
 
     return (str.replace(/(\t|\n|\r)/gi, "")).trim();
@@ -94,7 +94,7 @@
     #1 - breakWord
     #2 - indicator
 */
-µµ.constructor.prototype.filters["truncate"] = function(str, o)
+_m.constructor.prototype.filters["truncate"] = function(str, o)
 {
     return clipHtml(str, o[0],
     {

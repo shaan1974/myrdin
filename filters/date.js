@@ -4,7 +4,7 @@
 /*
     DATE
 */
-µµ.constructor.prototype.filters["dateFormat"] = function(v, f)
+_m.constructor.prototype.filters["dateFormat"] = function(v, f)
 {
 
     return moment(v, "" + f[0] + "").format("" + f[1] + "");
@@ -15,7 +15,7 @@
     Keys :
     years "y" , "quarters" : "Q" , "months" : "M" , "weeks" : "w" , "days" : "d" , "hours" : "h" , "minutes" : "m", "seconds" : "s" , "milliseconds" : "ms"
 */
-µµ.constructor.prototype.filters["dateAdd"] = function(v, f)
+_m.constructor.prototype.filters["dateAdd"] = function(v, f)
 {
 
     return moment(v, f[0]).add(f[1], f[2]).format(f[3]);
@@ -26,7 +26,7 @@
     Keys :
     years "y" , "quarters" : "Q" , "months" : "M" , "weeks" : "w" , "days" : "d" , "hours" : "h" , "minutes" : "m", "seconds" : "s" , "milliseconds" : "ms"
 */
-µµ.constructor.prototype.filters["dateSubstract"] = function(v, f)
+_m.constructor.prototype.filters["dateSubstract"] = function(v, f)
 {
 
     return moment(v, f[0]).subtract(f[1], f[2]).format(f[3]);

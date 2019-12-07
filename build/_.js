@@ -1,7 +1,7 @@
 /*jshint sub:true*/
 /*jslint evil: true */
 /*jslint esversion:6 */
-µµ.constructor.prototype.generateTemplate = function()
+_m.constructor.prototype.generateTemplate = function()
 {
     //  VARIABLES
     //
@@ -99,7 +99,7 @@
     delete window['__TMP_JSON_' + uuid];
 };
 
-µµ.constructor.prototype.putInPlaceTemplate = function()
+_m.constructor.prototype.putInPlaceTemplate = function()
 {
     //  OUTPUT INSIDE DEDICATE CONTAINER
     document.querySelector(this.generateData["dest"]).innerHTML = "";

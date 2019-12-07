@@ -4,7 +4,7 @@
 /*
 	OPTIONS
 */
-µµ.constructor.prototype.options = {
+_m.constructor.prototype.options = {
 
     "lg": "fr",
 

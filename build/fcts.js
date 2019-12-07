@@ -8,7 +8,7 @@
         - Remove breaklines, tab 
         - Fix multiples spaces with one
 */
-µµ.constructor.prototype.correctTemplate = function()
+_m.constructor.prototype.correctTemplate = function()
 {
     //  INCLUDE FIX REMOVE COMMENTS AND BREAKLINES,TABS REG EXP
     var _FIX_COMMENT_BREAKLINES_TABS_ = new RegExp(this.regExpFix._FIX_REMOVE_COMMENTS_.source + "|" + this.regExpFix._FIX_BREAKLINES_TABS_.source, "gi");
@@ -28,7 +28,7 @@
 
         Replace all start and ending paragraphs caracters inside RAW block.
 */
-µµ.constructor.prototype.rawSectionInTemplate = function()
+_m.constructor.prototype.rawSectionInTemplate = function()
 {
     //  VAR
     var that = this;
@@ -50,7 +50,7 @@
         "filters"   - if variable as filters attach
         "ndxs"      - indexes array
 */
-µµ.constructor.prototype.getVar = function(pc, path, name, filters, ndxs)
+_m.constructor.prototype.getVar = function(pc, path, name, filters, ndxs)
 {
     //  VARIABLES
     var v, cnt, len, e, safe = false,
@@ -135,7 +135,7 @@
         "name"      - name
         "parms"     - parmameters
 */
-µµ.constructor.prototype.getHelpers = function(pc, name, parms)
+_m.constructor.prototype.getHelpers = function(pc, name, parms)
 {
     //  IF NO PARMS WE CAN CALL THE HELPER DIRECTLY
     if (parms === "")
@@ -155,9 +155,9 @@
         real_parms = parms.replace(this.regExpReplace["_REAL_PARMS_"][0], this.regExpReplace["_REAL_PARMS_"][1]);
 
         /*var myObject = jsep("" + real_parms + "");
-        myKeys = JSON.stringify(myObject).match(µµ.regExp._MATCH_NAMES_GLOBAL_).map(function(o)
+        myKeys = JSON.stringify(myObject).match(_m.regExp._MATCH_NAMES_GLOBAL_).map(function(o)
         {
-            return o.match(µµ.regExp._MATCH_NAMES_)[1];
+            return o.match(_m.regExp._MATCH_NAMES_)[1];
         });*/
 
         myKeys = this.expressionVar(real_parms);
@@ -203,9 +203,9 @@
 };
 /*
     SORT JSON WITH FILTERS
-    ex : jsonData.homes.sort(µµ.fieldSorter(['city', '-price']));
+    ex : jsonData.homes.sort(_m.fieldSorter(['city', '-price']));
 */
-µµ.constructor.prototype.fieldSorter = function(fields)
+_m.constructor.prototype.fieldSorter = function(fields)
 {
     return function(a, b)
     {

@@ -7,7 +7,7 @@
     // GENERATE FROM STRING TEMPLATE
         console.clear();
         console.time("Total");
-        µµ(jsonData,template,"#content")
+        _m(jsonData,template,"#content")
         console.timeEnd("Total");
 
     //  GENERATE FROM SCRIPT TAG OR HTML CONTENT
@@ -15,39 +15,39 @@
         // SCRIPT
         console.clear();
         console.time("Total");
-        µµ(jsonData,"#tmpl","#content")
+        _m(jsonData,"#tmpl","#content")
         console.timeEnd("Total");
 
         // HTML
         console.clear();
         console.time("Total");
-        µµ(jsonData,"#content","#content")
+        _m(jsonData,"#content","#content")
         console.timeEnd("Total");        
 
 */
-function µµ(jsonData, template, destContent)
+function _m(jsonData, template, destContent)
 {
     /*
         INTERNAL FUNCTIONS
     */
-    µµ.about = function()
+    _m.about = function()
     {
         var about = {
-            Version: 0.58,
+            Version: "0.58",
             Author: "Liuzzi Stéphane Aka Shaan1974",
             Started: "17-10-2019",
-            Updated: "06-12-2019"
+            Updated: "12-12-2019"
         };
         return about;
     };
 
     /*
         INTERNAL VARIABLES
-        CALL WITH "µµ.version"
+        CALL WITH "_m.version"
     */
-    µµ.version = µµ.about().Version;
+    _m.version = _m.about().Version;
 
-    if (typeof jsonData === "undefined") return µµ.about();
+    if (typeof jsonData === "undefined") return _m.about();
 
     /*
         INTERNAL CALL
@@ -56,7 +56,7 @@ function µµ(jsonData, template, destContent)
     {
         if (window === this)
         {
-            return new µµ(jsonData, template, destContent);
+            return new _m(jsonData, template, destContent);
         }
 
         var string_template = true;
@@ -77,17 +77,17 @@ function µµ(jsonData, template, destContent)
 
         }
 
-        µµ.generateData = {
+        _m.generateData = {
             "template": template,
             "dest": destContent,
             "jsonData": jsonData
 
         };
 
-        µµ.generateTemplate();
-        µµ.putInPlaceTemplate();
+        _m.generateTemplate();
+        _m.putInPlaceTemplate();
 
         return;
     }
-    return µµ.about();
+    return _m.about();
 }

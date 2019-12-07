@@ -4,7 +4,7 @@
 /*
 	APPLY FILTERS
 */
-µµ.constructor.prototype.applyFilters = function(str, filters)
+_m.constructor.prototype.applyFilters = function(str, filters)
 {
     //  VARIABLES
     var parms, cnt, len, qlen, q;
@@ -36,4 +36,4 @@
 /*
 	FILTERS
 */
-µµ.constructor.prototype.filters = [];
+_m.constructor.prototype.filters = [];

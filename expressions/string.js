@@ -8,7 +8,7 @@
     DESC :  CALCULATE BINARY LENGTH 
     TYPE :  STRING
 */
-µµ.constructor.prototype.expression_function["binarylen"] = function(strExp)
+_m.constructor.prototype.expression_function["binarylen"] = function(strExp)
 {
     var cr = 0,
         cl;
@@ -38,7 +38,7 @@
     DESC :  IF STARTS WITH
     TYPE :  STRING
 */
-µµ.constructor.prototype.expression_function["startsWith"] = function(strExp, v)
+_m.constructor.prototype.expression_function["startsWith"] = function(strExp, v)
 {
     return strExp.startsWith(v);
 };
@@ -46,7 +46,7 @@
     DESC :  IF ENDS WITH
     TYPE :  STRING
 */
-µµ.constructor.prototype.expression_function["endsWith"] = function(strExp, v)
+_m.constructor.prototype.expression_function["endsWith"] = function(strExp, v)
 {
     return strExp.endsWith(v);
 };
@@ -54,7 +54,7 @@
        DESC :  IF CONTAINS
        TYPE :  STRING
 */
-µµ.constructor.prototype.expression_function["contains"] = function(strExp, v)
+_m.constructor.prototype.expression_function["contains"] = function(strExp, v)
 {
     return (strExp.indexOf(v) != -1) ? true : false;
 };
@@ -62,7 +62,7 @@
         DESC :  CONCAT ALL ARGUMENTS PASS TO THE FUNCTION
         TYPE :  RETURN TYPE IS STRING
 */
-µµ.constructor.prototype.expression_function["concat"] = function()
+_m.constructor.prototype.expression_function["concat"] = function()
 {
     return Array.prototype.slice.call(arguments).join("");
 };

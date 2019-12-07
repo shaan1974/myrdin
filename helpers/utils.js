@@ -7,7 +7,7 @@
 /*
     CREATE UUID
 */
-µµ.constructor.prototype.helpers["uuid"] = function()
+_m.constructor.prototype.helpers["uuid"] = function()
 {
-    return µµ.uuidv4();
+    return _m.uuidv4();
 };

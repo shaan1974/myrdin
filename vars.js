@@ -4,9 +4,9 @@
 /*
 	VARIABLES
 */
-µµ.constructor.prototype.generatedCode = "";
+_m.constructor.prototype.generatedCode = "";
 
-µµ.constructor.prototype.base_replacements = [
+_m.constructor.prototype.base_replacements = [
     //	MATH, STRING OPERATORS
     {
         "key": /[ ]EQ[ ]/gi,
@@ -48,7 +48,7 @@
 ];
 //	PRECOMPIL REG EXP
 
-µµ.constructor.prototype.regExp = {
+_m.constructor.prototype.regExp = {
     "_INTERNAL_VARS_": /@([\w]+)/gi,
     "_ARRAY_VARS_": /\w+\[\d+\]/gi,
     "_DOT_VARS_": /(\s{1}[a-zA-Z]{1}[\w\[\]]+(?:\.[a-zA-Z]{1}[\w\[\]]+){1,}\s{1})/gi,
@@ -78,7 +78,7 @@
     "_APPLY_FILTERS_": /[\']((.|\\n)*?)[\']|[\"]((.|\n)*?)[\"]/gi
 };
 
-µµ.constructor.prototype.regExpRevert = {
+_m.constructor.prototype.regExpRevert = {
     "_DOT_": ".",
     "_ROOT_": "./",
     "_BDOT_": "../",
@@ -87,7 +87,7 @@
     "_SELF_": " . "
 };
 
-µµ.constructor.prototype.regExpReplace = {
+_m.constructor.prototype.regExpReplace = {
     "_DOUBLE_QUOTES_": [
         /\"/gi, "\\\""
     ],
@@ -135,25 +135,25 @@
     ]
 };
 
-µµ.constructor.prototype.regExpressionBig = new RegExp(µµ.regExpReplace["EXP_VAR_SINGLE_QUOTE_"][0].source + "|" + µµ.regExpReplace["EXP_VAR_DOUBLE_QUOTE_"][0].source + "|" + µµ.regExpReplace["EXP_VAR_ARRAY_"][0].source + "|" + µµ.regExpReplace["EXP_COMMA_"][0].source + "|" + µµ.regExpReplace["EXP_TRUE_FALSE_"][0].source + "|" + µµ.regExpReplace["EXP_WHITE_SPACE_"][0].source, "gi");
+_m.constructor.prototype.regExpressionBig = new RegExp(_m.regExpReplace["EXP_VAR_SINGLE_QUOTE_"][0].source + "|" + _m.regExpReplace["EXP_VAR_DOUBLE_QUOTE_"][0].source + "|" + _m.regExpReplace["EXP_VAR_ARRAY_"][0].source + "|" + _m.regExpReplace["EXP_COMMA_"][0].source + "|" + _m.regExpReplace["EXP_TRUE_FALSE_"][0].source + "|" + _m.regExpReplace["EXP_WHITE_SPACE_"][0].source, "gi");
 
-µµ.constructor.prototype.regExpExtract = {
+_m.constructor.prototype.regExpExtract = {
     "_VAR_": /(\w+)(\[(\d+)\])*/,
     "_WORDS_": /\w+/gi
 };
 
-µµ.constructor.prototype.regExpFix = {
+_m.constructor.prototype.regExpFix = {
     "_FIX_REMOVE_COMMENTS_": /{{!--\s*((.|\n)*?)\s*--}}/gi,
     "_FIX_BREAKLINES_TABS_": /([ ]*\r\n|[ ]*\r|[ ]*\n|\t)/gim,
     "_FIX_SPACES_": /[ ]{2,}/gi,
     "FIX_IF_ELSE_IF_DOUBLE_QUOTES_": /{{\?\s*(else\s*)*if\s*(.*?)\s*\?}}/gi
 };
 
-µµ.constructor.prototype.regNotStatments = /}}(.*?){{/gi;
+_m.constructor.prototype.regNotStatments = /}}(.*?){{/gi;
 
-µµ.constructor.prototype.regRawFull = /{{%\s*raw\s*%}}(.*?){{%\/\s*raw\s*%}}/gi;
+_m.constructor.prototype.regRawFull = /{{%\s*raw\s*%}}(.*?){{%\/\s*raw\s*%}}/gi;
 
-µµ.constructor.prototype.regExp2 = {
+_m.constructor.prototype.regExp2 = {
     /*  EACH - ITERATOR */
     "_EACH_START_": /{{#\s*each\s*(.*?)\s*(\'(.*?)\'\s*)*#}}/gi, // {{# each }} OR {# each home 'city','-price' #}}
     "_EACH_END_": /{{#\s*end\s*each\s*#}}|{{\/#\s*each\s*#}}/gi, // {{# end each #}} OR {{/#each#}}
@@ -196,18 +196,18 @@
     "_END_DEFAULT_": /{{\?\s*end\s*default\s*\?}}|{{\/\?\s*default\s*\?}}/gi // {{? end default ?}} OR {{/? default ?}}
 };
 
-µµ.constructor.prototype.replaceBy2 = {
+_m.constructor.prototype.replaceBy2 = {
     /*  EACH - ITERATOR */
     "_EACH_START_": function(base, loop_var, filter, sort_filters)
     {
         //  IF FILTER HAS BEEN DEFINED OR NOT
-        sort_filters = (typeof sort_filters != "undefined") ? "current_context." + loop_var + ".sort(µµ.fieldSorter(['" + sort_filters + "'])); " : "";
+        sort_filters = (typeof sort_filters != "undefined") ? "current_context." + loop_var + ".sort(_m.fieldSorter(['" + sort_filters + "'])); " : "";
 
         var qqq = ";";
         qqq += "  " + sort_filters + "";
-        qqq += "  for (var cnt" + µµ.counters + " = 0, len" + µµ.counters + " = current_context." + loop_var + ".length; cnt" + µµ.counters + " < len" + µµ.counters + "; cnt" + µµ.counters + "++)";
+        qqq += "  for (var cnt" + _m.counters + " = 0, len" + _m.counters + " = current_context." + loop_var + ".length; cnt" + _m.counters + " < len" + _m.counters + "; cnt" + _m.counters + "++)";
         qqq += "  { ";
-        qqq += "      loop_" + loop_var + "(current_context." + loop_var + "[cnt" + µµ.counters + "], cnt" + µµ.counters + ", current_context." + loop_var + ");";
+        qqq += "      loop_" + loop_var + "(current_context." + loop_var + "[cnt" + _m.counters + "], cnt" + _m.counters + ", current_context." + loop_var + ");";
         qqq += "  ";
         qqq += "      function loop_" + loop_var + "(current_context, ndx, bbb)";
         qqq += "      {";
@@ -215,7 +215,7 @@
         qqq += "          parents_context.push(current_context);";
         qqq += "          zzz = zzz";
 
-        µµ.counters = µµ.counters + 1;
+        _m.counters = _m.counters + 1;
         return qqq;
     },
     "_EACH_END_": function()
@@ -231,23 +231,23 @@
     },
     /*  VARS */
     "_VAR_INDEX_": ".concat(ndx)",
-    "_VAR_NOW_": ".concat( moment().format(µµ.options.date.default_date_format) )",
+    "_VAR_NOW_": ".concat( moment().format(_m.options.date.default_date_format) )",
     "_VAR_": function(v0, v1, v2, v3, v4)
     {
         // GENERATED FILTERS
-        v4 = v4.trim().replace(µµ.regExpReplace["_FILTER1_"][0], µµ.regExpReplace["_FILTER1_"][1]).replace(µµ.regExpReplace["_FILTER2_"][0], µµ.regExpReplace["_FILTER2_"][1]).split("|").join("_,_");
+        v4 = v4.trim().replace(_m.regExpReplace["_FILTER1_"][0], _m.regExpReplace["_FILTER1_"][1]).replace(_m.regExpReplace["_FILTER2_"][0], _m.regExpReplace["_FILTER2_"][1]).split("|").join("_,_");
 
-        return ".concat( µµ.getVar(parents_context, '" + v2 + "','" + v3 + "','" + v4.trim() + "',ndxs) )";
+        return ".concat( _m.getVar(parents_context, '" + v2 + "','" + v3 + "','" + v4.trim() + "',ndxs) )";
     },
     /* HELPER */
-    "_HELPER_": ".concat(µµ.getHelpers(parents_context, '$2','$3'))",
+    "_HELPER_": ".concat(_m.getHelpers(parents_context, '$2','$3'))",
     /*  TEMPLATE */
     "_INLINE_TEMPLATE_START_": "; function fct_$1(parents_context) { var zzz=''; zzz = zzz",
     "_INLINE_TEMPLATE_END_": "; return zzz; } zzz = zzz.concat('')",
     "_INLINE_TEPLATE_CALL_": ".concat( fct_$1(parents_context) )",
     /*  CONDITIONNAL */
-    "_IF_": "; if( µµ.parseExpression(parents_context,\" $1 \",ndx,bbb) ) { zzz = zzz",
-    "_ELSE_IF_": "; } else if( µµ.parseExpression(parents_context,\"$1\",ndx,bbb) ) { zzz = zzz",
+    "_IF_": "; if( _m.parseExpression(parents_context,\" $1 \",ndx,bbb) ) { zzz = zzz",
+    "_ELSE_IF_": "; } else if( _m.parseExpression(parents_context,\"$1\",ndx,bbb) ) { zzz = zzz",
     "_ELSE_": "; } else { zzz = zzz",
     "_END_IF_": "; } zzz = zzz.concat('') ",
     /*  WITH - ITERATOR */
@@ -290,16 +290,16 @@
     /*  EVERY -ITERATOR */
     "_EVERY_START_": function(base, loop_var, filter, sort_filters)
     {
-        sort_filters = (typeof sort_filters != "undefined") ? "current_context." + loop_var + ".sort(µµ.fieldSorter(['" + sort_filters + "'])); " : "";
+        sort_filters = (typeof sort_filters != "undefined") ? "current_context." + loop_var + ".sort(_m.fieldSorter(['" + sort_filters + "'])); " : "";
 
         //  IF FILTER HAS BEEN DEFINED OR NOT
         var qqq = ";";
         qqq += "   if ( current_context." + loop_var + ".length!=0 ) ";
         qqq += "   { ";
         qqq += "   " + sort_filters + "";
-        qqq += "       for (var cnt" + µµ.counters + " = 0, len" + µµ.counters + " = current_context." + loop_var + ".length; cnt" + µµ.counters + " < len" + µµ.counters + "; cnt" + µµ.counters + "++)";
+        qqq += "       for (var cnt" + _m.counters + " = 0, len" + _m.counters + " = current_context." + loop_var + ".length; cnt" + _m.counters + " < len" + _m.counters + "; cnt" + _m.counters + "++)";
         qqq += "       { ";
-        qqq += "          loop_" + loop_var + "(current_context." + loop_var + "[cnt" + µµ.counters + "], cnt" + µµ.counters + ", current_context." + loop_var + ");";
+        qqq += "          loop_" + loop_var + "(current_context." + loop_var + "[cnt" + _m.counters + "], cnt" + _m.counters + ", current_context." + loop_var + ");";
         qqq += "        ";
         qqq += "          function loop_" + loop_var + "(current_context, ndx, bbb)";
         qqq += "          {";
@@ -307,7 +307,7 @@
         qqq += "             parents_context.push(current_context);";
         qqq += "             zzz = zzz";
 
-        µµ.counters = µµ.counters + 1;
+        _m.counters = _m.counters + 1;
 
         return qqq;
     },
@@ -339,7 +339,7 @@
         var qqq = ";";
 
         qqq += " current_vars = '" + aka_vars + "'; ";
-        qqq += " µµ.for_instances.push( (current_vars.replace(µµ.regExp._WHITE_SPACES_CHAR_, '')).split(',') ); ";
+        qqq += " _m.for_instances.push( (current_vars.replace(_m.regExp._WHITE_SPACES_CHAR_, '')).split(',') ); ";
         qqq += " current_context." + loop_var + ".forEach ";
         qqq += " (  ";
         qqq += "     function(current_context,ndx,bbb)  ";
@@ -349,7 +349,7 @@
         qqq += "         { ";
         qqq += "             build_vars[''+this[cnt]+''] = current_context[cnt]; ";
         qqq += "         } ";
-        qqq += "         µµ.fakeContext.push( build_vars); ";
+        qqq += "         _m.fakeContext.push( build_vars); ";
         qqq += "         ndxs.push(ndx); ";
         qqq += "         parents_context.push(current_context); ";
         qqq += "         zzz = zzz";
@@ -362,10 +362,10 @@
 
         qqq += "          ndxs.pop();";
         qqq += "          parents_context.pop();";
-        qqq += "          µµ.fakeContext.pop(); ";
-        qqq += "      } , µµ.for_instances[µµ.for_instances.length-1] ";
+        qqq += "          _m.fakeContext.pop(); ";
+        qqq += "      } , _m.for_instances[_m.for_instances.length-1] ";
         qqq += " ); ";
-        qqq += " µµ.for_instances.pop(); zzz = zzz";
+        qqq += " _m.for_instances.pop(); zzz = zzz";
 
         return qqq;
     },
@@ -378,14 +378,14 @@
     "_END_DEFAULT_": ";\n"
 };
 
-µµ.constructor.prototype.getBy2 = {
+_m.constructor.prototype.getBy2 = {
     "_VAR2_": "$2_,_$3_,_$4"
 };
 
-µµ.fakeContext = [];
-µµ.for_instances = [];
+_m.fakeContext = [];
+_m.for_instances = [];
 
-µµ.regExpBigCheck = new RegExp(µµ.regExp._INTERNAL_VARS_.source + "|" + µµ.regExp._ARRAY_VARS_.source + "|" + µµ.regExp._DOT_VARS_.source + "|" + µµ.regExp._DOT_.source + "|" + µµ.regExp._PARENT_VARS_.source + "|" + µµ.regExp._ROOT_VARS_.source + "|" + µµ.regExp._SELF_.source, "gi");
-µµ.regExpBigCheck2 = new RegExp(µµ.regExp._REVERT_DOT_.source + "|" + µµ.regExp._REVERT_ROOT_.source + "|" + µµ.regExp._REVERT_PARENT_.source + "|" + µµ.regExp._REVERT_STARTING_BRACKET_.source + "|" + µµ.regExp._REVERT_ENDING_BRACKET_.source + "|" + µµ.regExp._REVERT_SELF_.source, "gi");
+_m.regExpBigCheck = new RegExp(_m.regExp._INTERNAL_VARS_.source + "|" + _m.regExp._ARRAY_VARS_.source + "|" + _m.regExp._DOT_VARS_.source + "|" + _m.regExp._DOT_.source + "|" + _m.regExp._PARENT_VARS_.source + "|" + _m.regExp._ROOT_VARS_.source + "|" + _m.regExp._SELF_.source, "gi");
+_m.regExpBigCheck2 = new RegExp(_m.regExp._REVERT_DOT_.source + "|" + _m.regExp._REVERT_ROOT_.source + "|" + _m.regExp._REVERT_PARENT_.source + "|" + _m.regExp._REVERT_STARTING_BRACKET_.source + "|" + _m.regExp._REVERT_ENDING_BRACKET_.source + "|" + _m.regExp._REVERT_SELF_.source, "gi");
 
-µµ.counters = 0;
+_m.counters = 0;

@@ -7,7 +7,7 @@
 /*
     LIPSUM
 */
-µµ.constructor.prototype.helpers["lipsum"] = function(o, words, paragraphs)
+_m.constructor.prototype.helpers["lipsum"] = function(o, words, paragraphs)
 {
     words = parseInt(words);
     paragraphs = parseInt(paragraphs);

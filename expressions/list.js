@@ -4,14 +4,14 @@
 /*
     LIST CONTAINS
 */
-µµ.constructor.prototype.expression_function["list_contains"] = function(o, p)
+_m.constructor.prototype.expression_function["list_contains"] = function(o, p)
 {
     return (o.split(",").indexOf(p) === -1) ? false : true;
 };
 /*  
     LIST TO ARRAY
 */
-µµ.constructor.prototype.expression_function["list_to_array"] = function(v)
+_m.constructor.prototype.expression_function["list_to_array"] = function(v)
 {
     return v.split(",");
 };

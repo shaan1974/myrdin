@@ -7,14 +7,14 @@
 /*
     FORMAT DATE
 */
-µµ.constructor.prototype.expression_function["moment_date"] = function(d, f)
+_m.constructor.prototype.expression_function["moment_date"] = function(d, f)
 {
     return moment(d, f);
 };
 /*
     RETURN DIFFERENCE BETWEEN 2 DATES
 */
-µµ.constructor.prototype.expression_function["date_diff"] = function(d1, d2, m)
+_m.constructor.prototype.expression_function["date_diff"] = function(d1, d2, m)
 {
     return d1.diff(d2, "" + m + "");
 };

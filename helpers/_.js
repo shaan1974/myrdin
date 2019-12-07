@@ -4,7 +4,7 @@
 /*
     HELPERS
 */
-µµ.constructor.prototype.helpers = {
+_m.constructor.prototype.helpers = {
     /*
         CONCAT
     */

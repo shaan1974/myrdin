@@ -4,15 +4,15 @@
 /*
 	FUNCTIONS
 */
-µµ.constructor.prototype.function = [];
+_m.constructor.prototype.function = [];
 
 /*
 	GENERATE UUID
 */
-µµ.constructor.prototype.uuidv4 = function()
+_m.constructor.prototype.uuidv4 = function()
 {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
-        µµ.regExp["_UUID_"],
+        _m.regExp["_UUID_"],
         function(c)
         {
             var r = Math.random() * 16 | 0,
@@ -21,14 +21,14 @@
         }
     );
 };
-µµ.constructor.prototype.uuid = function()
+_m.constructor.prototype.uuid = function()
 {
     return ("" + Math.random().toString(36).substring(2) + Date.now().toString(36) + "").toUpperCase();
 };
 /*
     STRIP HTML
 */
-µµ.constructor.prototype.stripHtml = function(str)
+_m.constructor.prototype.stripHtml = function(str)
 {
     if (str == null) return "";
     var div = document.createElement("div");
@@ -39,10 +39,10 @@
 /*
     EVALUATE
 */
-µµ.constructor.prototype.evaluate = function(str)
+_m.constructor.prototype.evaluate = function(str)
 {
     //  VARS
-    var cuid = µµ.uuidv4();
+    var cuid = _m.uuidv4();
 
     //	CREATE SCRIPT TAG AND POPULATE WITH INSTRUCTIONS
     var s = document.createElement('script');
@@ -65,7 +65,7 @@
     EXTRACT VARIABLES EXPRESSION
     TO REPLACE JSEP
 */
-µµ.constructor.prototype.expressionVar = function(z)
+_m.constructor.prototype.expressionVar = function(z)
 {
     //  ALL ELEMENT BEWTEEN SINGLE OR DOUBLE QUOTE
     //  ALL ELEMENT BEWTEEN SINGLE OR SINGLE QUOTE
@@ -90,7 +90,7 @@
 /*
     GET INDEX OF NODE ON LOCATED ON THE SAME LEVEL
 */
-µµ.constructor.prototype.getNodeindex = function(elm)
+_m.constructor.prototype.getNodeindex = function(elm)
 {
     var c = elm.parentNode.children,
         i = 0;

@@ -4,7 +4,7 @@
 /*
 	EXPRESSIONS FUNCTIONS
 */
-µµ.constructor.prototype.expression_function = {
+_m.constructor.prototype.expression_function = {
     /*
         DESC :  CHECK IF ELEMENT IS EMPTY
         TYPE :  STRING,LIST AND ARRAY

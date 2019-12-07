@@ -4,31 +4,31 @@
 /*
     PARSE EXPRESSION SUN FCT
 */
-µµ.constructor.prototype.parseExpression_rbc = function(fv)
+_m.constructor.prototype.parseExpression_rbc = function(fv)
 {
-    return µµ.regExpRevert[fv];
+    return _m.regExpRevert[fv];
 };
 
-µµ.constructor.prototype.parseExpression_sort = function(a, b)
+_m.constructor.prototype.parseExpression_sort = function(a, b)
 {
     // ASC  -> a.length - b.length
     // DESC -> b.length - a.length    
     return b.length - a.length;
 };
 
-µµ.constructor.prototype.parseExpression_array_replace = function(r)
+_m.constructor.prototype.parseExpression_array_replace = function(r)
 {
     return r.replace("[", "_SBR_").replace("]", "_EBR_");
 };
 
-µµ.constructor.prototype.parseExpression_dot_replace = function(r)
+_m.constructor.prototype.parseExpression_dot_replace = function(r)
 {
-    return r.replace(µµ.regExp._DOT_, "_DOT_");
+    return r.replace(_m.regExp._DOT_, "_DOT_");
 };
 /*
 	PARSE EXPRESSION
 */
-µµ.constructor.prototype.parseExpression = function(pc, exp, ndx, ccc)
+_m.constructor.prototype.parseExpression = function(pc, exp, ndx, ccc)
 {
     //  VAR
     var cnt, len, current_key, v, n, value, c;
@@ -51,13 +51,13 @@
         //  #1 - test[1]
         exp = exp.replace(
             this.regExp._ARRAY_VARS_,
-            µµ.parseExpression_array_replace
+            _m.parseExpression_array_replace
         );
 
         //	#2 - user.status
         exp = exp.replace(
             this.regExp._DOT_VARS_,
-            µµ.parseExpression_dot_replace
+            _m.parseExpression_dot_replace
         );
 
         //  #3 - "PARENT" - ../
@@ -89,9 +89,9 @@
     /*
     var myObject = jsep(exp);
 
-    var myKeys = JSON.stringify(myObject).match(µµ.regExp._MATCH_NAMES_GLOBAL_).map(function(o)
+    var myKeys = JSON.stringify(myObject).match(_m.regExp._MATCH_NAMES_GLOBAL_).map(function(o)
     {
-        return o.match(µµ.regExp._MATCH_NAMES_)[1];
+        return o.match(_m.regExp._MATCH_NAMES_)[1];
     });
     */
     // var myKeys = this.expressionVar(exp);
@@ -105,7 +105,7 @@
         var myKeys = this.expressionVar(exp);
         //	SORT ARRAY TO GET MAXIMUM LENGTH STRING TO MIN
         //
-        myKeys.sort(µµ.constructor.prototype.parseExpression_sort);
+        myKeys.sort(_m.constructor.prototype.parseExpression_sort);
 
         //	LOOP TO CHECK IF VAR EXIST OR NOT
 
@@ -116,13 +116,13 @@
             //
             if (current_key.indexOf("INTERNAL_FUNCTION_") === 0)
             {
-                exp = exp.replace(current_key, "µµ.expression_function." + current_key.slice(18, -1) + "(");
+                exp = exp.replace(current_key, "_m.expression_function." + current_key.slice(18, -1) + "(");
             }
             //  CASE OF INTERNAL VAR STARTING WITH "@" (first,last,odd,even,index)
             //
             else if (current_key.indexOf("__IV_") === 0)
             {
-                exp = µµ.parseExpressionSmallFct[current_key.substr(5)](exp, current_key, ndx, ccc);
+                exp = _m.parseExpressionSmallFct[current_key.substr(5)](exp, current_key, ndx, ccc);
             }
             else
             {
@@ -130,7 +130,7 @@
                 //
                 n = current_key.replace(
                     this.regExpBigCheck2,
-                    µµ.parseExpression_rbc
+                    _m.parseExpression_rbc
                 );
 
                 if (n !== "_ENDP_")
@@ -188,7 +188,7 @@
     return this.parsedExptression();
 };
 
-µµ.constructor.prototype.parseExpressionSmallFct = {
+_m.constructor.prototype.parseExpressionSmallFct = {
 
     "first": function(e, c, n, ccc)
     {

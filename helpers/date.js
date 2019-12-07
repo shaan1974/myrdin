@@ -4,21 +4,21 @@
 /*
     DATE
 */
-µµ.constructor.prototype.helpers["date_diff"] = function(o, d1, f1, d2, f2, m)
+_m.constructor.prototype.helpers["date_diff"] = function(o, d1, f1, d2, f2, m)
 {
-    var dd1 = µµ.expression_function["moment_date"](d1, f1);
-    var dd2 = µµ.expression_function["moment_date"](d2, f2);
+    var dd1 = _m.expression_function["moment_date"](d1, f1);
+    var dd2 = _m.expression_function["moment_date"](d2, f2);
 
     return dd1.diff(dd2, "" + m + "");
 };
 /*
     NOW
 */
-µµ.constructor.prototype.helpers["now"] = function(o, f)
+_m.constructor.prototype.helpers["now"] = function(o, f)
 {
     if (typeof f === "undefined")
     {
-        f = µµ.options.date.default_date_format;
+        f = _m.options.date.default_date_format;
     }
     return moment().format(f);
 };
