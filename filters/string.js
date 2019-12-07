@@ -4,21 +4,20 @@
 /*
 	STRING
 */
-_m.constructor.prototype.filters["uppercase"] = function(str)
+/*_m.constructor.prototype.filters["uppercase"] = function(str)
 {
     return str.toUpperCase();
-};
-
-_m.constructor.prototype.filters["lowercase"] = function(str)
+};*/
+/*_m.constructor.prototype.filters["lowercase"] = function(str)
 {
     return str.toLowerCase();
-};
-
+};*/
+/*
 _m.constructor.prototype.filters["trim"] = function(str)
 {
     return str.trim();
 };
-
+*/
 _m.constructor.prototype.filters["capitalizeFirstLetter"] = function(str)
 {
     str = str.toLowerCase();
@@ -33,28 +32,24 @@ _m.constructor.prototype.filters["capitalizeEachWord"] = function(str)
         return _m.filters.capitalizeFirstLetter(o);
     }).join(" ");
 };
-
+/*
 _m.constructor.prototype.filters["trim"] = function(str)
 {
 
     return str.replace(/^\s+|\s+$/g, "");
-};
-
-_m.constructor.prototype.filters["ltrim"] = function(str)
+};*/
+/*_m.constructor.prototype.filters["ltrim"] = function(str)
 {
 
     return str.replace(/^\s+/, "");
-};
-
-_m.constructor.prototype.filters["rtrim"] = function(str)
+};*/
+/*_m.constructor.prototype.filters["rtrim"] = function(str)
 {
 
     return str.replace(/\s+$/, "");
-};
-
+};*/
 _m.constructor.prototype.filters["split"] = function(str, parms)
 {
-
     var p1 = (typeof parms !== "undefined") ? parms[0] : " ";
 
     return str.split("" + p1 + "");
@@ -71,19 +66,16 @@ _m.constructor.prototype.filters["slice"] = function(str, parms)
 
 _m.constructor.prototype.filters["urlEncode"] = function(str)
 {
-
     return encodeURIComponent(str);
 };
 
 _m.constructor.prototype.filters["urlDecode"] = function(str)
 {
-
     return decodeURIComponent(str);
 };
 
 _m.constructor.prototype.filters["linearize"] = function(str)
 {
-
     return (str.replace(/(\t|\n|\r)/gi, "")).trim();
 };
 /*

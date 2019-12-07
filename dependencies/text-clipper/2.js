@@ -59,6 +59,7 @@ var TRIM_END_REGEX = /\s+$/;
  *
  * @return The clipped string.
  */
+/*
 module.exports = function clip(string, maxLength)
 {
     var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] :
@@ -78,6 +79,7 @@ module.exports = function clip(string, maxLength)
 
     return options.html ? clipHtml(string, maxLength, options) : clipPlainText(string, maxLength, options);
 };
+*/
 
 function clipHtml(string, maxLength, options)
 {

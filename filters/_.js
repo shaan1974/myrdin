@@ -28,7 +28,15 @@ _m.constructor.prototype.applyFilters = function(str, filters)
             }
         }
 
-        str = this.filters[filters[q]](str, parms);
+        //  IF A QUICK FILTER IS DEFINED WE CALL IT.
+        if (this.quick_filters_call.indexOf(filters[q]) !== -1)
+        {
+            str = str[this.quick_filters_replace[this.quick_filters_call.indexOf(filters[q])]]();
+        }
+        else
+        {
+            str = this.filters[filters[q]](str, parms);
+        }
     }
 
     return str;
@@ -37,3 +45,8 @@ _m.constructor.prototype.applyFilters = function(str, filters)
 	FILTERS
 */
 _m.constructor.prototype.filters = [];
+/*
+    QUICK FILTERS, IN PLACE OF CALL A PROTOTYPE WE CALL DIRECTLY THE ORIGINAL STATMENTS
+*/
+_m.constructor.prototype.quick_filters_call = ["uppercase", "lowercase", "trim", "ltrim", "rtrim"];
+_m.constructor.prototype.quick_filters_replace = ["toUpperCase", "toLowerCase", "trim", "trimLeft", "trimRight"];
