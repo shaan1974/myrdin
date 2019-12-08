@@ -9,10 +9,10 @@ function _m(jsonData, template, destContent)
     _m.about = function()
     {
         var about = {
-            Version: "0.71",
+            Version: "0.72",
             Author: "Liuzzi Stéphane Aka Shaan1974",
             Started: "17-10-2019",
-            Updated: "07-12-2019"
+            Updated: "08-12-2019"
         };
         return about;
     };
