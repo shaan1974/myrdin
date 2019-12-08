@@ -14,6 +14,6 @@ _m(jsonData, template, "#content");
 
 Parameters :
 
-#1 - Json Data 
-#2 - template, could be a variable or the selector of a SCRIPT TAG or other HTML HTML ( div ).
-#3 - Destination selector
+* - Json Data 
+* - template, could be a variable or the selector of a SCRIPT TAG or other HTML HTML ( div ).
+* - Destination selector
