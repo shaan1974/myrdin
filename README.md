@@ -1,7 +1,7 @@
 # Myrdin
 Javascript Template Engine
 
-Still in beta version.
+Still in beta version, so bugs could still exists.
 
 But you can already test it with files from examples folder.
 
