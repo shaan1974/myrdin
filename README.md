@@ -12,13 +12,13 @@ It's even working with Internet Explorer.
 _m(jsonData, template, "#content");
 ```
 
-### **Parameters :**
+## **Parameters :**
 
 * Json Data 
 * template, could be a variable or the selector of a SCRIPT TAG or other HTML tag like div.
 * Destination selector
 
-#### **Template statements :**
+### **Template statements :**
 
 ### **Variables :**
 
