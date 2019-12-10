@@ -18,7 +18,7 @@ _m(jsonData, template, "#content");
 * template, could be a variable or the selector of a SCRIPT TAG or other HTML tag like div.
 * Destination selector
 
-Template statements :
+#### **Template statements :**
 
 ### **Variables :**
 
