@@ -61,6 +61,7 @@ Internal variables
 ### **Statments :**
 
 **if / else if / else**
+
 ```
 {{? if lesson EQ "French" ?}}
   <p>French Lesson__.</p>
@@ -132,9 +133,10 @@ On Array.
 </ul>		
 ```
 
-**With **
+**With**
 
 To create a context on a simple object.
+
 ```
 Details:
 <br/>
@@ -143,9 +145,10 @@ Details:
 {{# end with #}}    
 ```
 
-**List **
+**List**
 
 String field separated with comas.
+
 ```
 <ul>		
   {{# list todo_list #}}
@@ -159,6 +162,7 @@ String field separated with comas.
 ```
 
 Sorted list.
+
 ```
 <b>CUSTOM TODO LIST SORT - DESC</b>
 <ul>		
@@ -170,9 +174,10 @@ Sorted list.
 </ul>  
 ```
 
-**Every with Otherwise **
+**Every with Otherwise**
 
 Loop with else if the loop is empty.
+
 ```
 <p>
   <b>TRAINING #1</b>
@@ -186,9 +191,10 @@ Loop with else if the loop is empty.
 </p>
 ```
 
-** For **
+**For**
 
 To create fake data with element columns.
+
 ```
 <b>FOR ()</b>
 <ul>		
@@ -203,6 +209,7 @@ To create fake data with element columns.
 ### **Helpers :**
 
 **Custom functions.**
+
 ```
 <p>NOW custom format: "{{^now 'DD-MM-YYYY HH:mm:ss'}}"</p>
 <p>NOW config format: "{{^now}}"</p>
@@ -212,14 +219,16 @@ To create fake data with element columns.
 
 ### **Inline templates :**
 
-Defintion
+Defintion.
+
 ```
 {{~ fullName}}
   "{{=firstname}}-{{=lastname}}"
 {{/~}}	
 ```
 
-Call
+Call.
+
 ```
 <p>({{> fullName }})</p>
 ```
