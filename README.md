@@ -22,7 +22,7 @@ _m(jsonData, template, "#content");
 
 ### **Variables :**
 
-Basic ( current context )
+Basic
 ```
 {{=firstname}}
 ```
