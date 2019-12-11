@@ -18,6 +18,13 @@ _m(jsonData, template, "#content");
 * template, could be a variable or the selector of a SCRIPT TAG or other HTML tag like div.
 * Destination selector
 
+### **To do :**
+
+* Precompile template
+* Add filters
+* Add helpers
+* Add sub templates
+
 ### **Template statements :**
 
 ### **Variables :**
@@ -219,6 +226,8 @@ To create fake data with element columns.
 
 ### **Inline templates :**
 
+Templates tooks the current context.
+
 Defintion.
 
 ```
@@ -227,7 +236,7 @@ Defintion.
 {{/~}}	
 ```
 
-Call..
+Call.
 
 ```
 <p>({{> fullName }})</p>
