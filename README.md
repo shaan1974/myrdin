@@ -21,8 +21,6 @@ _m(jsonData, template, "#content");
 ### **To do :**
 
 * Precompile template
-* Add filters
-* Add helpers
 * Add sub templates
 
 ### **Template statements :**

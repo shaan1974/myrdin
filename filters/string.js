@@ -4,26 +4,11 @@
 /*
 	STRING
 */
-/*_m.constructor.prototype.filters["uppercase"] = function(str)
-{
-    return str.toUpperCase();
-};*/
-/*_m.constructor.prototype.filters["lowercase"] = function(str)
-{
-    return str.toLowerCase();
-};*/
-/*
-_m.constructor.prototype.filters["trim"] = function(str)
-{
-    return str.trim();
-};
-*/
 _m.constructor.prototype.filters["capitalizeFirstLetter"] = function(str)
 {
     str = str.toLowerCase();
     return str.charAt(0).toUpperCase() + str.slice(1);
 };
-
 _m.constructor.prototype.filters["capitalizeEachWord"] = function(str)
 {
 
@@ -32,29 +17,12 @@ _m.constructor.prototype.filters["capitalizeEachWord"] = function(str)
         return _m.filters.capitalizeFirstLetter(o);
     }).join(" ");
 };
-/*
-_m.constructor.prototype.filters["trim"] = function(str)
-{
-
-    return str.replace(/^\s+|\s+$/g, "");
-};*/
-/*_m.constructor.prototype.filters["ltrim"] = function(str)
-{
-
-    return str.replace(/^\s+/, "");
-};*/
-/*_m.constructor.prototype.filters["rtrim"] = function(str)
-{
-
-    return str.replace(/\s+$/, "");
-};*/
 _m.constructor.prototype.filters["split"] = function(str, parms)
 {
     var p1 = (typeof parms !== "undefined") ? parms[0] : " ";
 
     return str.split("" + p1 + "");
 };
-
 _m.constructor.prototype.filters["slice"] = function(str, parms)
 {
 
@@ -63,7 +31,6 @@ _m.constructor.prototype.filters["slice"] = function(str, parms)
 
     return str.slice(p1, p2);
 };
-
 _m.constructor.prototype.filters["urlEncode"] = function(str)
 {
     return encodeURIComponent(str);
