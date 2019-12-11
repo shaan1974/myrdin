@@ -388,7 +388,20 @@ _m.constructor.prototype.getBy2 = {
 _m.fakeContext = [];
 _m.for_instances = [];
 
-_m.regExpBigCheck = new RegExp(_m.regExp._INTERNAL_VARS_.source + "|" + _m.regExp._ARRAY_VARS_.source + "|" + _m.regExp._DOT_VARS_.source + "|" + _m.regExp._DOT_.source + "|" + _m.regExp._PARENT_VARS_.source + "|" + _m.regExp._ROOT_VARS_.source + "|" + _m.regExp._SELF_.source, "gi");
-_m.regExpBigCheck2 = new RegExp(_m.regExp._REVERT_DOT_.source + "|" + _m.regExp._REVERT_ROOT_.source + "|" + _m.regExp._REVERT_PARENT_.source + "|" + _m.regExp._REVERT_STARTING_BRACKET_.source + "|" + _m.regExp._REVERT_ENDING_BRACKET_.source + "|" + _m.regExp._REVERT_SELF_.source, "gi");
+_m.tmp_array = ["_INTERNAL_VARS_", "_ARRAY_VARS_", "_DOT_VARS_", "_DOT_", "_PARENT_VARS_", "_ROOT_VARS_", "_SELF_"];
+_m.regExpBigCheck = new RegExp(_m.tmp_array.map(function(o)
+{
+    return _m.regExp[o].source;
+}).join("|"), "gi");
+
+// _m.regExpBigCheck = new RegExp(_m.regExp._INTERNAL_VARS_.source + "|" + _m.regExp._ARRAY_VARS_.source + "|" + _m.regExp._DOT_VARS_.source + "|" + _m.regExp._DOT_.source + "|" + _m.regExp._PARENT_VARS_.source + "|" + _m.regExp._ROOT_VARS_.source + "|" + _m.regExp._SELF_.source, "gi");
+
+_m.tmp_array = ["_REVERT_DOT_", "_REVERT_ROOT_", "_REVERT_PARENT_", "_REVERT_STARTING_BRACKET_", "_REVERT_ENDING_BRACKET_", "_REVERT_SELF_"];
+_m.regExpBigCheck2 = new RegExp(_m.tmp_array.map(function(o)
+{
+    return _m.regExp[o].source;
+}).join("|"), "gi");
+
+// _m.regExpBigCheck2 = new RegExp(_m.regExp._REVERT_DOT_.source + "|" + _m.regExp._REVERT_ROOT_.source + "|" + _m.regExp._REVERT_PARENT_.source + "|" + _m.regExp._REVERT_STARTING_BRACKET_.source + "|" + _m.regExp._REVERT_ENDING_BRACKET_.source + "|" + _m.regExp._REVERT_SELF_.source, "gi");
 
 _m.counters = 0;

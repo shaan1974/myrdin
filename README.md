@@ -213,6 +213,12 @@ To create fake data with element columns.
 {{# end for #}}
 </ul>
 ```
+### **Filters :**
+
+Create a new one :
+```
+_m.addFilter("avg2", "var sum = a.reduce(function(previous, current){ return current += previous; }); return (sum / a.length);");
+```
 
 ### **Helpers :**
 
@@ -223,6 +229,11 @@ To create fake data with element columns.
 <p>NOW config format: "{{^now}}"</p>
 <p>UUID: "{{^uuid}}"</p>
 <p>_DATE DIFF: (04-01-1986)-(31-12-1985) "{{^date_diff update_date , 'DD-MM-YYYY' , creation_date , 'DD-MM-YYYY' , 'days' }}"</p>
+```
+
+Create a new one :
+```
+_m.addHelper("avg", "var sum = parm1.reduce(function(previous, current){ return current += previous; }); return (sum / parm1.length);");
 ```
 
 ### **Inline templates :**
