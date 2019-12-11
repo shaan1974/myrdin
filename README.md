@@ -227,7 +227,7 @@ Defintion.
 {{/~}}	
 ```
 
-Call.
+Call..
 
 ```
 <p>({{> fullName }})</p>
