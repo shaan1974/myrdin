@@ -25,6 +25,8 @@
     function init() {
 
         console.clear();
+        _m.addHelper("avg", "var sum = parm1.reduce(function(previous, current){ return current += previous; }); return (sum / parm1.length);");
+        _m.addFilter("avg2", "var sum = a.reduce(function(previous, current){ return current += previous; }); return (sum / a.length);");
         console.time("Total");
         _m(jsonData, template, "#content")
         console.timeEnd("Total");
