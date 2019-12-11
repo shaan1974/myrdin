@@ -11,3 +11,11 @@ _m.constructor.prototype.helpers["uuid"] = function()
 {
     return _m.uuid();
 };
+/*
+    DEBUG
+*/
+_m.constructor.prototype.helpers["debug"] = function(o, v)
+{
+    console.log((v === "context") ? o : v);
+    return "";
+};

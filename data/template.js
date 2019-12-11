@@ -563,6 +563,9 @@ template = function()
 				<p>data_array pos 0 EQ 'Ax'</p>
 				{{? end if ?}}				
 
+				{{^debug notes}}
+				{{^debug 'context'}}
+
 					
    	*/
 }.toString().trim();
