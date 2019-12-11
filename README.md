@@ -29,37 +29,37 @@ _m(jsonData, template, "#content");
 
 ### **Variables :**
 
-Basic
+* Basic
 ```
 {{=firstname}}
 ```
 
-With filter(s)
+* With filter(s)
 ```
 {{=data_array | uniq|join '-' }}
 ```
 
-Index Array
+* Index Array
 ```
 {{=users[0].aka}}
 ```
 
-Root
+* Root
 ```
 {{=./firstname}}
 ```
 
-Parent
+* Parent
 ```
 {{=../firstname}}
 ```
 
-Inside Array context
+* Inside Array context
 ```
 {{=.}}
 ```
 
-Internal variables
+* Internal variables
 ```
 {{=@index}}
 {{=@now}}
