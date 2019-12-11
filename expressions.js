@@ -34,9 +34,18 @@ _m.constructor.prototype.parseExpression = function(pc, exp, ndx, ccc)
     var cnt, len, current_key, v, n, value, c;
 
     //	BASE REPLACEMENTS FOR MATH, STRING OPERATORS AND COMPARISONS OPERATORS
+    /*
     for (cnt = 0, len = this.base_replacements.length; cnt < len; cnt++)
     {
         exp = exp.replace(this.base_replacements[cnt].key, this.base_replacements[cnt].replace);
+    }
+    */
+    cnt = 0;
+    len = this.base_replacements.length;
+    while (cnt < len)
+    {
+        exp = exp.replace(this.base_replacements[cnt].key, this.base_replacements[cnt].replace);
+        cnt++;
     }
 
     //  CHECK IF EXPRESSION NEED REPLACEMENT BELOW
@@ -77,10 +86,18 @@ _m.constructor.prototype.parseExpression = function(pc, exp, ndx, ccc)
     //  REPLACE EXPRESSION FUNCTION WITH DEFINE START TAG.
     //  len -> INTERNAL_FUNCTION__len_
     //
-    for (cnt = 0, len = this.fct_keys.length; cnt < len; cnt++)
+    /*for (cnt = 0, len = this.fct_keys.length; cnt < len; cnt++)
     {
         exp = exp.replace(this.fct_keys_rg[cnt], " INTERNAL_FUNCTION_" + this.fct_keys[cnt] + "_ ");
+    }*/
+    cnt = 0;
+    len = this.fct_keys.length;
+    while (cnt < len)
+    {
+        exp = exp.replace(this.fct_keys_rg[cnt], " INTERNAL_FUNCTION_" + this.fct_keys[cnt] + "_ ");
+        cnt++;
     }
+
     //  REPLACE END PARENTHESIS WITH DEFINE ALIAS
     exp = exp.replace(this.regExp._END_PARENTHESIS_, " _ENDP_ ");
 
@@ -129,7 +146,8 @@ _m.constructor.prototype.parseExpression = function(pc, exp, ndx, ccc)
 
                     if (c.indexOf("Array") !== -1)
                     {
-                        v = " [" + ("-,-" + v.join("-,-") + "-,-").replace(this.regExpReplace["_EXPRESSION_ARRAY_"][0], this.regExpReplace["_EXPRESSION_ARRAY_"][1]).slice(2, -2) + "] ";
+                        // v = " [" + ("-,-" + v.join("-,-") + "-,-").replace(this.regExpReplace["_EXPRESSION_ARRAY_"][0], this.regExpReplace["_EXPRESSION_ARRAY_"][1]).slice(2, -2) + "] ";
+                        v = JSON.stringify(v);
                     }
                     else if (c.indexOf("Number") !== -1)
                     {

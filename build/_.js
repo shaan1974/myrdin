@@ -105,5 +105,9 @@ _m.constructor.prototype.putInPlaceTemplate = function()
     document.querySelector(this.generateData["dest"]).innerHTML = "";
     // document.querySelector(this.generateData["dest"]).insertAdjacentHTML('beforeend', "<!-- *:root -->" + this.generatedCode + "<!-- /*:root -->");
     document.querySelector(this.generateData["dest"]).insertAdjacentHTML('beforeend', "" + this.generatedCode + "");
-    console.log(this.generatedCode.length);
+
+    if (this.debug === true)
+    {
+        console.log(this.generatedCode.length);
+    }
 };

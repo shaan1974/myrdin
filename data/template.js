@@ -115,6 +115,8 @@ template = function()
 					<p>Truncate not safe : <div style='background-color:green;'>{{=comment | truncate '100' 'true' '___'}}</div></p>
 					<p>Sqrt {{=number1 | sqrt}}</p>
 					<p>Pow {{=number1 | pow '2'}}</p>
+					<p>To Fixed {{=payment | to_fixed '2'}} , not fixed : {{=payment}}</p>
+					<p>Hyphenate : {{=sentense | hyphenate}}</p>
 				</p>
 
 
@@ -126,6 +128,7 @@ template = function()
 					<p>Aka Users Index 0 Aka : "{{=users[0].aka}}"</p>
 
 					<p>[Date courante : '{{=@now}}' ]</p>
+					<p>[Année en cours : '{{=@year}}' ]</p>
 				
 				</p>
 				
@@ -537,7 +540,29 @@ template = function()
 
 					{{# end each #}}
 				</table>
+
+				<hr/>
+
+				Notes avg (internal one) = {{=notes |avg}}
+				<br/>
+				Notes avg (added) = {{=notes |avg2}}
+
+				<hr/>
+				<br/>
+				<b>Expressions: </b>
+
+				{{? if is_array( notes) ?}}
+				<p>Notes variable is Array_type</p>
+				{{? end if ?}}				
 								
+				{{? if item_pos_in_array( notes , 2 , 3 ) ?}}
+				<p>Notes pos 2 EQ 3</p>
+				{{? end if ?}}				
+
+				{{? if item_pos_in_array( data_array , 0 , 'Ax' ) ?}}
+				<p>data_array pos 0 EQ 'Ax'</p>
+				{{? end if ?}}				
+
 					
    	*/
 }.toString().trim();

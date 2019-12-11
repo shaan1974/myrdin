@@ -10,7 +10,8 @@ _m.constructor.prototype.options = {
 
     "date":
     {
-        "default_date_format": "LLLL"
+        "default_date_format": "LLLL",
+        "year": "YYYY"
     },
 
     "format":

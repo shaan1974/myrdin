@@ -29,3 +29,17 @@ _m.constructor.prototype.expression_function["in_array"] = function(v, p)
 {
     return (v.indexOf(p) !== -1) ? true : false;
 };
+/*
+    IS ARRAY
+*/
+_m.constructor.prototype.expression_function["is_array"] = function(v)
+{
+    return ((v.constructor.toString().indexOf("Array") === -1) ? false : true);
+};
+/*
+    ITEM POS IN ARRAY
+*/
+_m.constructor.prototype.expression_function["item_pos_in_array"] = function(a, p, v)
+{
+    return (a[p] === v) ? true : false;
+};

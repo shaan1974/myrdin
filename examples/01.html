@@ -54,6 +54,8 @@
 <script>
     function init() {
 
+        _m.addFilter("avg2", "var sum = a.reduce(function(previous, current){ return current += previous; }); return (sum / a.length);");
+        _m.debug = true;
         console.clear();
         console.time("Total");
         _m(jsonData, template, "#content")

@@ -4,6 +4,7 @@
 /*
 	VARIABLES
 */
+_m.constructor.prototype.debug = false;
 _m.constructor.prototype.generatedCode = "";
 
 _m.constructor.prototype.base_replacements = [
@@ -160,6 +161,7 @@ _m.constructor.prototype.regExp2 = {
     /*  VARS */
     "_VAR_INDEX_": /{{=@index}}/gi,
     "_VAR_NOW_": /{{=@now}}/gi,
+    "_VAR_YEAR_": /{{=@year}}/gi,
     "_VAR_": /{{=(\s*((?:[\.]{0,2}\/)*)([(@\w\-)\[\]]+(?:\.[(@\w\-)\[\]]+)*|\.{1})((?:\s*\|\s*[\w\'\,\s\-\"\'\\]+)*\s*))}}/gi,
     /* HELPER */
     "_HELPER_": /{{\^\s*(([@\w\.\/\-]+)((?:\s+[[\"|\']*[\w\-\.\[\]\@\/\,\'\\\+\*\:]+[\"|\']*)*))\s*}}/gi,
@@ -232,6 +234,7 @@ _m.constructor.prototype.replaceBy2 = {
     /*  VARS */
     "_VAR_INDEX_": ".concat(ndx)",
     "_VAR_NOW_": ".concat( moment().format(_m.options.date.default_date_format) )",
+    "_VAR_YEAR_": ".concat( moment().format(_m.options.date.year) )",
     "_VAR_": function(v0, v1, v2, v3, v4)
     {
         // GENERATED FILTERS

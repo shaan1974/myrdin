@@ -97,3 +97,10 @@ _m.constructor.prototype.filters["truncate"] = function(str, o)
         maxLines: 5
     });
 };
+/*
+    HYPHENATE
+*/
+_m.constructor.prototype.filters["hyphenate"] = function(str)
+{
+    return str.replace(/\s/gi, "-");
+};

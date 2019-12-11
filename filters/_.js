@@ -50,3 +50,14 @@ _m.constructor.prototype.filters = [];
 */
 _m.constructor.prototype.quick_filters_call = ["uppercase", "lowercase", "trim", "ltrim", "rtrim"];
 _m.constructor.prototype.quick_filters_replace = ["toUpperCase", "toLowerCase", "trim", "trimLeft", "trimRight"];
+/*
+    ADD FILTERS
+
+    _m.addFilter("avg2","var sum = a.reduce(function(previous, current){ return current += previous; }); return (sum / a.length);")
+
+    Each function should receive 2 parms, "a" the value of the element, "parms" if parms are attach to the filter
+*/
+_m.constructor.prototype.addFilter = function(name, fct)
+{
+    _m.filters["" + name + ""] = new Function('a', 'parms', '' + fct + '');
+};

@@ -63,6 +63,7 @@ Internal variables
 ```
 {{=@index}}
 {{=@now}}
+{{=@year}}
 ```
 
 ### **Statments :**

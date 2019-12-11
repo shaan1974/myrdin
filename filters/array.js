@@ -32,3 +32,28 @@ _m.constructor.prototype.filters["size"] = function(a)
 {
     return a.length;
 };
+/*
+    AVERAGE
+*/
+_m.constructor.prototype.filters["avg"] = function(a)
+{
+    var sum = a.reduce(function(previous, current)
+    {
+        return current += previous;
+    });
+    return (sum / a.length);
+};
+/*
+    ARRAY FIRST
+*/
+_m.constructor.prototype.filters["array_first"] = function(a)
+{
+    return a[0];
+};
+/*
+    ARRAY LAST
+*/
+_m.constructor.prototype.filters["array_last"] = function(a)
+{
+    return a[a.length - 1];
+};

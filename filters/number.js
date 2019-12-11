@@ -65,3 +65,9 @@ _m.constructor.prototype.filters["formatCurrency"] = function(v)
 {
     return accounting.formatMoney(v, _m.options.format.currency);
 };
+/*
+ */
+_m.constructor.prototype.filters["to_fixed"] = function(v, parms)
+{
+    return v.toFixed(parms[0]);
+};
