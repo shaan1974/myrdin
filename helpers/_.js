@@ -2,7 +2,18 @@
 /*jslint evil: true */
 /*jslint esversion:6 */
 /*
-    HELPERS
+    ADD HELPER
+
+    _m.helpers("avg","var sum = parm1.reduce(function(previous, current){ return current += previous; }); return (sum / parm1.length);")
+
+    Each function should receive parms: "o" the element, "parms" if parms are attach to the filter , parm1,parm2,parm3 and so on.
+*/
+_m.constructor.prototype.addHelper = function(name, fct)
+{
+    _m.helpers["" + name + ""] = new Function('o', 'parm1', '' + fct + '');
+};
+/*
+    COMMON HELPERS
 */
 _m.constructor.prototype.helpers = {
     /*

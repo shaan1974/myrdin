@@ -566,6 +566,12 @@ template = function()
 				{{^debug notes}}
 				{{^debug 'context'}}
 
+				<hr/>
+				<b>HELPERS:</b>
+				<br/>
+				Avg : {{^avg notes}}
+
+
 					
    	*/
 }.toString().trim();
