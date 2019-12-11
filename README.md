@@ -242,3 +242,17 @@ Call.
 ```
 <p>({{> fullName }})</p>
 ```
+
+### **Debug :**
+
+To debug a define variable.
+
+```
+{{^debug notes}}
+```
+
+To debug current context.
+
+```
+{{^debug 'context'}}
+```
