@@ -9,10 +9,10 @@ function _m(jsonData, template, destContent)
     _m.about = function()
     {
         var about = {
-            Version: "0.78",
+            Version: "0.79",
             Author: "Liuzzi Stéphane Aka Shaan1974",
             Started: "17-10-2019",
-            Updated: "11-12-2019"
+            Updated: "12-12-2019"
         };
         return about;
     };
@@ -46,6 +46,9 @@ function _m(jsonData, template, destContent)
             {
                 template = document.querySelector("" + template + "").innerHTML;
             }
+
+            //  CORRECT HTML TO BE ABLE TO USE SUB TEMPLATE CALL
+            template = template.replace(/{{&gt;\s/gi, "{{> ");
             string_template = false;
         }
         catch (e)

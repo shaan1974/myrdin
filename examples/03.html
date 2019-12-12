@@ -55,6 +55,9 @@
 
         console.clear();
         console.time("Total");
+        //  ADD NEW TEMPLATE
+        _m.addTemplate("dates", "Dates : {{=creation_date}} {{=update_date}}.");
+        //  BUILD
         _m(jsonData, "#content", "#content")
         console.timeEnd("Total");
 
@@ -66,6 +69,8 @@
     <h5>Template into the same destination container:</h5>
 
     <div id="content">
+
+        <p>( {{> dates }} )</p>
         <p>
             <b>TRAINING #1</b>
             <ul>

@@ -21,7 +21,6 @@ _m(jsonData, template, "#content");
 ### **To do :**
 
 * Precompile template
-* Add sub templates
 
 ### **Template statements :**
 
@@ -252,7 +251,15 @@ Call.
 <p>({{> fullName }})</p>
 ```
 
-### **Debug :**
+### **Outsite templates :**
+
+```
+_m.addTemplate("dates", "Dates : {{=creation_date}} {{=update_date}}.");
+```
+
+For the call it's the same as inline templates.
+
+### **Debuging :**
 
 To debug a define variable.
 

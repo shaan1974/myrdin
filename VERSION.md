@@ -1,3 +1,9 @@
+0.79
+12-12-2019
+
+- Add sub template, look example 3
+- No distribution files yet compiled
+
 0.78
 11-12-2019
 

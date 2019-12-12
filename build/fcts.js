@@ -220,3 +220,11 @@ _m.constructor.prototype.fieldSorter = function(fields)
             }, 0);
     };
 };
+/*
+    ADD TEMPLATE
+*/
+_m.constructor.prototype.outsideTemplates = [];
+_m.constructor.prototype.addTemplate = function(name, content)
+{
+    _m.outsideTemplates["" + name + ""] = content;
+};

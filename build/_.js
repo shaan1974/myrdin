@@ -8,9 +8,19 @@ _m.constructor.prototype.generateTemplate = function()
     var starting_code;
     var that = this;
     var uuid = this.uuid();
+    var key;
     this.internal_uuid = uuid;
     window["__TMP_" + uuid + ""] = "";
     window["__TMP_JSON_" + uuid + ""] = this.generateData.jsonData;
+
+    //  CHECK IF OUTSIDE TEMPLATE(S) EXIST
+    for (key in this.outsideTemplates)
+    {
+        if (this.outsideTemplates.hasOwnProperty(key))
+        {
+            this.generateData["template"] = "{{~" + key + "}} " + this.outsideTemplates[key] + " {{/~}} " + this.generateData["template"];
+        }
+    }
 
     //  CORRECT TEMPLATE
     //  FIXES FOR :
@@ -79,7 +89,7 @@ _m.constructor.prototype.generateTemplate = function()
     );
 
     //  REPLACEMENT OF REGULAR EXPRESSIONS FOR ALL DEFINED STATMENTS ( EACH, FOR, IF , VARIABLES ...)
-    for (var key in this.regExp2)
+    for (key in this.regExp2)
     {
         if (this.regExp2.hasOwnProperty(key))
         {
