@@ -1,3 +1,7 @@
+0.79-B
+
+- Distributions files. ( Minify and Pack )
+
 0.79
 12-12-2019
 

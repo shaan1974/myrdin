@@ -9,7 +9,7 @@ function _m(jsonData, template, destContent)
     _m.about = function()
     {
         var about = {
-            Version: "0.79",
+            Version: "0.79-B",
             Author: "Liuzzi Stéphane Aka Shaan1974",
             Started: "17-10-2019",
             Updated: "12-12-2019"
