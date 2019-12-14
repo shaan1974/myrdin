@@ -228,3 +228,13 @@ _m.constructor.prototype.addTemplate = function(name, content)
 {
     _m.outsideTemplates["" + name + ""] = content;
 };
+/*
+    ROT 13
+*/
+_m.constructor.prototype.rot13 = function(c)
+{
+    return c.replace(/([a-m])|([n-z])/ig, function($0, $1, $2)
+    {
+        return String.fromCharCode($1 ? $1.charCodeAt(0) + 13 : $2 ? $2.charCodeAt(0) - 13 : 0) || $0;
+    });
+};

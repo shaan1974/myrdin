@@ -20,7 +20,7 @@ _m(jsonData, template, "#content");
 
 ### **To do :**
 
-* Precompile template
+* I don't know yet :)
 
 ### **Template statements :**
 
@@ -272,3 +272,10 @@ To debug current context.
 ```
 {{^debug 'context'}}
 ```
+
+### **Precompile templates :**
+
+Take a look to examples 4 and 5.
+
+Example 4 you can pregenerate the compile template.
+Example 5 how to use a precompiled template.

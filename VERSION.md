@@ -1,3 +1,7 @@
+0.80 
+
+- Precompiled Template with tool.
+
 0.79-B
 
 - Distributions files. ( Minify and Pack )

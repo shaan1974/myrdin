@@ -375,10 +375,14 @@ _m.constructor.prototype.replaceBy2 = {
     /*  SWITCH - CONDITIONAL */
     "_SWITCH_": "; switch( current_context.$1 ) { ",
     "_END_SWITCH": "} zzz = zzz.concat('')",
-    "_CASE_": "\ncase $1 : zzz = zzz.concat('')",
-    "_END_CASE_": "; break; \n",
-    "_DEFAULT_": "\n default : zzz = zzz.concat('')",
-    "_END_DEFAULT_": ";\n"
+    /*"_CASE_": "\ncase $1 : zzz = zzz.concat('')",*/
+    "_CASE_": " case $1 : zzz = zzz.concat('')",
+    /*"_END_CASE_": "; break; \n",*/
+    "_END_CASE_": "; break; ",
+    /*"_DEFAULT_": "\n default : zzz = zzz.concat('')",*/
+    "_DEFAULT_": " default : zzz = zzz.concat('')",
+    /*"_END_DEFAULT_": ";\n"*/
+    "_END_DEFAULT_": ";"
 };
 
 _m.constructor.prototype.getBy2 = {
@@ -405,3 +409,6 @@ _m.regExpBigCheck2 = new RegExp(_m.tmp_array.map(function(o)
 // _m.regExpBigCheck2 = new RegExp(_m.regExp._REVERT_DOT_.source + "|" + _m.regExp._REVERT_ROOT_.source + "|" + _m.regExp._REVERT_PARENT_.source + "|" + _m.regExp._REVERT_STARTING_BRACKET_.source + "|" + _m.regExp._REVERT_ENDING_BRACKET_.source + "|" + _m.regExp._REVERT_SELF_.source, "gi");
 
 _m.counters = 0;
+_m.precompile = false;
+_m.generatedPrecompiledCode = "";
+_m.debug = false;
